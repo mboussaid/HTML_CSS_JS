@@ -1,0 +1,81 @@
+body{
+    display: grid;
+    place-content: center;
+    margin:0;
+    font-family: 'poppins';
+    color:#222;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./background.svg);
+    background-size: contain;
+   
+    
+}
+*{
+    box-sizing: border-box;
+    outline: none !important;
+}
+button{
+    cursor: pointer;
+}
+.d-flex{
+    display: flex;
+    align-items: center;
+}
+.d-flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.d-inline-block{
+    display: inline-block;
+}
+
+.d-none{
+    display: none;
+}
+.form-container input , .d-flex button , .d-flex select{
+    margin:15px 0px;
+    padding: 15px 25px;
+    border:none;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    min-width: 80px;
+    position: relative;
+    
+}
+.form-container input{
+    border:2px solid transparent;
+}
+
+#error-messages span{
+    display: block;
+    padding: 0px;
+    margin: 0px;
+    font-size: 14px;
+    color:#f44336;
+    transform: all 0.4s ease 0s;
+    animation: fade 1s ease 0s;
+}
+@keyframes fade{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.margin{
+    margin-left: 20px !important;
+}
+
+
+.valid{
+    color:#42b932;
+    border-color: #42b932 !important;
+
+}
+.invalid{
+    color:#f44336;
+    border-color:#f44336 !important;
+}
