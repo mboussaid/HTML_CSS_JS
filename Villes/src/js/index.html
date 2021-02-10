@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="./dolar.js" ></script>
+
+</head>
+<body>
+<input type="password" placeholder="password" />
+
+<style type="text/css" media="screen">
+	.success{
+    color:green;
+    border:2px solid green;
+}
+.error{
+    color:red;
+    border:2px solid red;
+}
+
+</style>
+<script >
+
+$('input').addVerify(/^\w{8,}$/,'success','error');
+</script>
+</body>
+</html>

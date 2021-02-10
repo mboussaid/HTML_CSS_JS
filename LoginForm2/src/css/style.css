@@ -1,0 +1,135 @@
+@charset "UTF-8";
+* {
+  font-family: poppins,karla;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+  box-sizing: border-box;
+  border: none;
+}
+
+body {
+  background-color: #4db1f3;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+main {
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+}
+main section {
+  width: 350px;
+  height: 300px;
+  transition: all 0.4s ease 0s;
+  position: relative;
+}
+main .bg {
+  background-color: #2196f3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+@media screen and (max-width: 700px) {
+  main .bg {
+    background-color: #fff;
+    color: #4db1f3;
+  }
+  main .bg:after {
+    color: #4db1f3 !important;
+    background-color: #fff !important;
+    z-index: 11;
+  }
+}
+main .bg i {
+  font-size: 80px;
+  margin: 15px 0px;
+}
+main .bg span {
+  margin: 10px 0px;
+  font-size: 0.7em;
+}
+main .bg:after {
+  font-family: "themify";
+  position: absolute;
+  top: 50%;
+  right: -35px;
+  width: 70px;
+  height: 70px;
+  transform: translateY(-50%);
+  background-color: #2196f3;
+  content: "";
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+@media screen and (max-width: 700px) {
+  main .bg:after {
+    content: "";
+    bottom: -35px;
+    left: 50%;
+    top: auto;
+    transform: translateX(-50%);
+  }
+}
+main .login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+@media screen and (max-width: 700px) {
+  main .login {
+    background-color: #2196f3;
+  }
+  main .login button {
+    background-color: #fff !important;
+    color: #2196f3 !important;
+  }
+}
+main .login .inline {
+  display: flex;
+  align-items: center;
+  margin: 5px 0px;
+}
+main .login .inline .icon {
+  width: 40px;
+  height: 40px;
+  background-color: #f5f5f5;
+  display: grid;
+  place-content: center;
+}
+main .login .inline .icon i {
+  color: #2196f3;
+}
+main .login .inline input {
+  width: 200px;
+  height: 40px;
+  background-color: #f5f5f5;
+}
+main .login .inline input::placeholder {
+  color: #2196f3;
+}
+main .login .inline button {
+  width: 240px;
+  height: 40px;
+  background-color: #2196f3;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 400;
+  transition: background-color 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+}
+@media screen and (max-width: 700px) {
+  main {
+    flex-direction: column;
+  }
+}

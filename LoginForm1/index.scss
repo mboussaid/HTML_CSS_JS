@@ -1,0 +1,152 @@
+*{
+    list-style: none;
+    font-family: 'poppins';
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none !important;
+}
+$form-radius:8px;
+$input-radius:8px;
+$colors-radius:8px;
+$colors-size:30px;
+body{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    background-color: #2ECC71 ;
+    transition: background-color 0.4s ease 0s;
+}
+.col{
+    transition: color 0.4s ease 0s;
+}
+.bg{
+    transition: background-color 0.4s ease 0s;
+}
+form{
+    position: relative;
+    border-radius: $form-radius;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //width: 300px;
+    padding: 25px 30px;
+    background-color: #fff;
+    color:#222;
+    overflow: hidden;
+  //box-shadow: 6px 10px 10px 4px rgba($color: #222, $alpha: 0.3);
+    .logo{
+        font-size: 40px;
+        color: #2ECC71        ;
+    }
+    h3{
+        color: #2ECC71        ;
+    }
+    input{
+        margin-top: 15px;
+       
+    }
+    input:not([type="checkbox"]){
+        padding: 9px 10px;
+        width: 200px;
+       border:none;
+       border-radius: $input-radius;
+       background-color: #e8dbdb;
+      
+    }
+    input[type="submit"]{
+        width: 200px;
+        background-color:#2ECC71   ;
+        color: #fff;
+        cursor: pointer;
+    }
+    input[type="checkbox"]{
+        margin-right: auto;
+
+    }
+    .colors{
+        display: flex;
+        margin-top: 30px;
+        justify-content: space-between;
+        width: 100%;
+        div{
+            width: $colors-size;
+            height: $colors-size;
+            border:2px solid transparent;
+            border-radius: $colors-radius;
+            cursor: pointer;
+            transition: border-color 0.4s ease 0s;
+            &.active{
+                // border-color: #222;
+                animation: color 0.4s ease 0s;
+            //    ? box-shadow: 5px 10px 26px 6px rgba($color: #222, $alpha: 0.7);
+            
+
+            }
+        }
+        .blue{
+            background-color: #2980B9;
+            
+        }
+        .green{
+            background-color: #2ECC71;
+        }
+        .cyan{
+            background-color: #3498DB;
+        }
+        .orange{
+            background-color: #F39C12;
+        }
+        .purple{
+            background-color: #8E44AD;
+        }
+        .red{
+            background-color: #E74C3C;
+        }
+    }
+    
+}
+@keyframes color{
+    0%{
+        transform: scale(2)  ;
+        
+
+    }
+    100%{
+        transform: scale(1) ;
+    }
+}
+.close{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top:0px;
+    right: 0px;
+    background-color: #e0e0e0;
+    color: #222;
+    font-size: 15px;
+    border-radius: 8px;
+    display: grid;
+    place-content: center;
+    margin: 8px;
+    transition: background-color 0.4s ease 0s , color 0.4s ease 0s;;
+    &:hover{
+        
+            background-color: #E74C3C;
+            color: #fff;
+            cursor: pointer;
+        
+    }
+}
+span{
+    padding: 10px 0px;
+    background-color: rgba(#2ECC71 ,0.2);
+    width: 200px;
+    margin-top: 15px;
+    border-radius: $input-radius;
+    text-align: center;
+    color: #2ECC71 ;
+
+
+}

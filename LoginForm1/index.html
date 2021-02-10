@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="themify-icons/themify-icons.css">
+<script src="jquery.min.js"></script>
+<!-- <script src="./lib/axios.min.js"></script> -->
+</head>
+<body>
+  <form>
+    <i class="ti-basketball logo col"></i>
+    <h3 class="col">Dribble</h3>
+    <input type="text" name="" placeholder="Email" id="">
+    <input type="text" name="" placeholder="Password" id="">
+   
+    <input class="submit bg" type="submit" value="Login">
+    <div class="colors">
+      <div data-color="#2980B9" class="blue"></div>
+      <div data-color="#2ECC71" class="green active"></div>
+      <div data-color="#E74C3C" class="red"></div>
+      <div data-color="#8E44AD"  class="purple"></div>
+      <div  data-color="#3498DB" class="cyan"></div>
+      <div  data-color="#F39C12" class="orange"></div>
+    </div>
+    <div class="ti-close close"></div>
+  </form>
+  <script>
+    $(".colors div").click(function(){
+      $(".colors div").each(function(index,el){
+        el.classList.remove("active")
+      })
+      $(this).addClass("active")
+      var color = $(this).data("color")
+      console.log("6px 10px 10px 4px rgba("+color+",0.7)")
+      $(".logo").css("color",color)
+      $("h3").css("color",color)
+      $(".submit").css("background-color",color)
+      $("body").css("background-color",color)
+      $("span").css("background-color","#e0e0e0")
+      $("span").css("color",color)
+      // $("form").css("box-shadow","6px 10px 10px 4px rgb("+color+") !imporant")
+    })
+
+    $(".close").click(function(){
+      $("form").animate({width:"400px"},"fast",function(params) {
+       $("input , span").animate({width:"300px" , height:"45px"  , marginTop:"30px"},"fast",function(params) {
+        
+        $(".colors div").animate({height:"40px"  , width:"40px"})
+       })
+      })
+     
+    })
+    $(".submit").click(function(event) {
+      event.preventDefault()
+      $(".submit").replaceWith("<span>Please Wait ...</span>")
+      
+    })
+
+  </script>
+</body>
+</html>

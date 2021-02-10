@@ -1,0 +1,54 @@
+    * {
+ 
+  padding: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+
+}
+
+body{
+	display: grid;
+	place-content:center;
+	width: 100vw;
+	height: 100vh;
+}
+.flex {
+
+  display: flex;
+}
+
+
+.flex .green {
+  background-color: #2ECC71;
+}
+.flex .blue {
+  background-color: #3498DB;
+}
+.flex .gray {
+  background-color: #95A5A6;
+}
+.flex div {
+  transition: all 0.4s ease 0s;
+  transform: rotate(45deg);
+  width: 200px;
+  height: 200px;
+  position: relative;
+  border-radius: 5px;
+}
+.flex div:before {
+  transition: all 0.4s ease 0s;
+  border-radius: 5px;
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+}
+.flex div:not(:nth-child(1)) {
+  margin-left: -50px;
+}
+
